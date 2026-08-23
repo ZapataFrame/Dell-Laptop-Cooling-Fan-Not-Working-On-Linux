@@ -74,11 +74,11 @@ This fix was diagnosed and confirmed on the following system:
 | **Vendor** | Dell Inc. |
 | **Chassis** | Notebook (type 10) |
 
-### Tested on:
-
-| OS | Kernel | Status |
-|---|---|---|
-| Linux Mint 22.3 (Zena) | 6.17.0-14-generic | **Working** |
+### Confirmed variants:
+| Model | OS | BIOS | Kernel | Status |
+|---|---|---|---|---|
+| Dell 15 DC15250 | Linux Mint 22.3 | 1.6.0 | 6.17.0-14-generic | **Working**|
+| Latitude 5530 | Ubuntu | 1.27.0 | 6.17.0-35-generic | **Working**|
 
 ### Likely also applies to:
 
@@ -273,8 +273,9 @@ If this fix worked (or didn't work) for your Dell model, please open an issue wi
 
 1. Your laptop model (`cat /sys/class/dmi/id/product_name`)
 2. Your BIOS version (`cat /sys/class/dmi/id/bios_version`)
-3. Your Linux distribution and kernel version (`uname -r`)
-4. Whether the fix worked or not
+3. Your Linux distribution (`cat /etc/os-release | grep PRETTY_NAME`)
+4. Your kernel version (`uname -r`)
+5. Whether the fix worked or not
 
 ---
 
